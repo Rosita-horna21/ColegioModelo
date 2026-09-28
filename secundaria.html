@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nivel Secundaria de la I.E. Emblemática Modelo N° 81007 de Trujillo: cinco años de formación para señoritas, del 1° al 5° grado, turno tarde. Áreas curriculares, jornada escolar y matrícula.">
+    <link rel="icon" type="image/png" href="imagenes/logo.png">
+    <title>Nivel Secundaria | I.E. Modelo - Trujillo</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/secundaria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#contenido" class="salto-contenido">Ir al contenido</a>
+
+    <header class="barra-navegacion">
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="Logo I.E. Modelo" class="logo-img">
+            <div class="logo-texto">
+                <h2>I.E. MODELO</h2>
+                <p>Trujillo · Perú</p>
+            </div>
+        </div>
+
+        <button id="boton-menu" class="boton-menu" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="menu-enlaces" class="menu-enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="estudios.html" class="activo">Estudios</a>
+            <a href="noticia.html">Noticias</a>
+            <a href="galeria.html">Galería</a>
+            <a href="matricula.html">Matrícula</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+    <!-- ==========================  HERO  ========================== -->
+    <section class="secu-hero">
+        <div class="secu-hero__foto" role="img" aria-label="Pabellón de aulas de la I.E. Modelo"></div>
+        <div class="secu-hero__velo" aria-hidden="true"></div>
+
+        <div class="secu-hero__caja">
+            <div class="secu-hero__texto">
+                <a href="estudios.html" class="migaja">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a Estudios
+                </a>
+
+                <p class="secu-cinta">Educación Básica Regular</p>
+
+                <h1>Cinco años que deciden a dónde llega</h1>
+
+                <p class="secu-hero__bajada">
+                    Nuestro nivel secundario acompaña a las estudiantes desde los 12 hasta los 16 años:
+                    de las bases del primer grado hasta la decisión vocacional que las lleva a la
+                    universidad o al instituto. Aquí puedes ver cómo es cada año.
+                </p>
+
+                <div class="secu-hero__acciones">
+                    <a href="#ruta" class="btn-principal">Ver la ruta de 1° a 5°</a>
+                    <a href="matricula.html" class="btn-secundario">Proceso de matrícula</a>
+                </div>
+            </div>
+
+            <dl class="secu-ficha">
+                <div><dt>Grados</dt><dd>1° a 5°</dd></div>
+                <div><dt>Edades</dt><dd>12 a 16 años</dd></div>
+                <div><dt>Turno</dt><dd>Tarde</dd></div>
+                <div><dt>Modalidad</dt><dd>Presencial</dd></div>
+            </dl>
+        </div>
+    </section>
+
+    <!-- ==================  RUTA DE 5 AÑOS (interactiva)  ================== -->
+    <section id="ruta" class="seccion-comun secu-ruta">
+
+        <div class="titulo-contenedor">
+            <h2>La ruta de 1° a 5°</h2>
+            <div class="linea-decorativa"></div>
+        </div>
+        <p class="subtitulo">
+            Cada grado tiene un propósito distinto. Elige un año para ver qué se trabaja,
+            qué se espera de ella al terminarlo y cuáles son sus hitos.
+        </p>
+
+        <div class="secu-pista">
+            <div class="secu-pista__linea" aria-hidden="true">
+                <span class="secu-pista__avance" id="pista-avance"></span>
+            </div>
+
+            <div class="secu-pista__tabs" role="tablist" aria-label="Grados de secundaria">
+                <button class="secu-hito is-activo" role="tab" id="tab-g1" aria-controls="panel-g1" aria-selected="true" data-grado="1">
+                    <span class="secu-hito__punto"><span class="secu-hito__num">1°</span></span>
+                    <span class="secu-hito__edad">12 años</span>
+                </button>
+                <button class="secu-hito" role="tab" id="tab-g2" aria-controls="panel-g2" aria-selected="false" tabindex="-1" data-grado="2">
+                    <span class="secu-hito__punto"><span class="secu-hito__num">2°</span></span>
+                    <span class="secu-hito__edad">13 años</span>
+                </button>
+                <button class="secu-hito es-ciclo7" role="tab" id="tab-g3" aria-controls="panel-g3" aria-selected="false" tabindex="-1" data-grado="3">
+                    <span class="secu-hito__punto"><span class="secu-hito__num">3°</span></span>
+                    <span class="secu-hito__edad">14 años</span>
+                </button>
+                <button class="secu-hito es-ciclo7" role="tab" id="tab-g4" aria-controls="panel-g4" aria-selected="false" tabindex="-1" data-grado="4">
+                    <span class="secu-hito__punto"><span class="secu-hito__num">4°</span></span>
+                    <span class="secu-hito__edad">15 años</span>
+                </button>
+                <button class="secu-hito es-ciclo7" role="tab" id="tab-g5" aria-controls="panel-g5" aria-selected="false" tabindex="-1" data-grado="5">
+                    <span class="secu-hito__punto"><span class="secu-hito__num">5°</span></span>
+                    <span class="secu-hito__edad">16 años</span>
+                </button>
+            </div>
+
+            <p class="secu-leyenda">
+                <span class="secu-chip-ciclo es-vi">Ciclo VI</span> 1° y 2° grado
+                <span class="secu-chip-ciclo es-vii">Ciclo VII</span> 3°, 4° y 5° grado
+            </p>
+        </div>
+
+        <div class="secu-panel" role="tabpanel" id="panel-g1" aria-labelledby="tab-g1" tabindex="0">
+            <div class="secu-panel__principal">
+                <span class="secu-panel__ciclo es-vi">Ciclo VI</span>
+                <h3>Llegar, adaptarse y aprender a estudiar</h3>
+                <p>El salto desde primaria es grande: más áreas, más docentes y mucha más autonomía. Durante todo el año se trabajan hábitos de estudio, organización del tiempo y convivencia, para que ninguna estudiante se quede atrás en el camino.</p>
+                <h4>Al terminar 1° grado, ella puede…</h4>
+                <ul class="secu-logros">
+                    <li>Organizar su agenda y sus tiempos de estudio sin que se lo recuerden.</li>
+                    <li>Leer un texto de varias páginas y explicar con sus palabras la idea central.</li>
+                    <li>Trabajar en equipo respetando acuerdos y turnos de palabra.</li>
+                </ul>
+            </div>
+            <aside class="secu-panel__lado">
+                <h4>Hitos del año</h4>
+                <ol class="secu-hitos-lista">
+                    <li><span>Marzo</span> Jornada de integración para ingresantes</li>
+                    <li><span>Abril</span> Evaluación diagnóstica de lectura y matemática</li>
+                    <li><span>Julio</span> Feria de proyectos de aula</li>
+                    <li><span>Noviembre</span> Exposición de proyectos de aula</li>
+                </ol>
+            </aside>
+        </div>
+
+        <div class="secu-panel" role="tabpanel" id="panel-g2" aria-labelledby="tab-g2" tabindex="0" hidden>
+            <div class="secu-panel__principal">
+                <span class="secu-panel__ciclo es-vi">Ciclo VI</span>
+                <h3>Consolidar las competencias base</h3>
+                <p>Segundo grado cierra el Ciclo VI. Es el año en que la lectura, la escritura y la resolución de problemas deben quedar firmes, porque todo lo que viene después se apoya en ellas.</p>
+                <h4>Al terminar 2° grado, ella puede…</h4>
+                <ul class="secu-logros">
+                    <li>Escribir un texto argumentativo breve con una postura clara y evidencia que la sostenga.</li>
+                    <li>Resolver problemas con fracciones, proporciones y ecuaciones sencillas.</li>
+                    <li>Ejecutar una indagación científica guiada, desde la pregunta hasta la conclusión.</li>
+                </ul>
+            </div>
+            <aside class="secu-panel__lado">
+                <h4>Hitos del año</h4>
+                <ol class="secu-hitos-lista">
+                    <li><span>Mayo</span> Concurso interno de comprensión lectora</li>
+                    <li><span>Agosto</span> Feria de ciencias del Ciclo VI</li>
+                    <li><span>Setiembre</span> Evaluación de logros de aprendizaje</li>
+                    <li><span>Diciembre</span> Cierre de ciclo y preparación para 3°</li>
+                </ol>
+            </aside>
+        </div>
+
+        <div class="secu-panel es-ciclo-vii" role="tabpanel" id="panel-g3" aria-labelledby="tab-g3" tabindex="0" hidden>
+            <div class="secu-panel__principal">
+                <span class="secu-panel__ciclo es-vii">Ciclo VII</span>
+                <h3>Pensar con criterio propio</h3>
+                <p>Arranca el Ciclo VII y la exigencia académica sube. Tercero es el año del pensamiento crítico: contrastar fuentes, discutir con argumentos y sostener una posición sin repetir lo que dice el libro.</p>
+                <h4>Al terminar 3° grado, ella puede…</h4>
+                <ul class="secu-logros">
+                    <li>Contrastar dos fuentes sobre un mismo hecho e identificar sesgos e intenciones.</li>
+                    <li>Participar en un debate formal defendiendo una postura asignada.</li>
+                    <li>Usar funciones, estadística y probabilidad para interpretar datos reales.</li>
+                </ul>
+            </div>
+            <aside class="secu-panel__lado">
+                <h4>Hitos del año</h4>
+                <ol class="secu-hitos-lista">
+                    <li><span>Abril</span> Inicio del club de debate y oratoria</li>
+                    <li><span>Junio</span> Proyecto de investigación interdisciplinar</li>
+                    <li><span>Setiembre</span> Primer test de intereses vocacionales</li>
+                    <li><span>Noviembre</span> Debate escolar interno</li>
+                </ol>
+            </aside>
+        </div>
+
+        <div class="secu-panel es-ciclo-vii" role="tabpanel" id="panel-g4" aria-labelledby="tab-g4" tabindex="0" hidden>
+            <div class="secu-panel__principal">
+                <span class="secu-panel__ciclo es-vii">Ciclo VII</span>
+                <h3>Descubrir hacia dónde quiere ir</h3>
+                <p>Cuarto es el año de la orientación vocacional. Se combina tutoría personalizada, visitas a universidades e institutos de Trujillo y charlas con egresadas, para que la decisión de quinto no se tome a último momento ni por descarte.</p>
+                <h4>Al terminar 4° grado, ella puede…</h4>
+                <ul class="secu-logros">
+                    <li>Nombrar dos o tres carreras que la interesan y explicar por qué.</li>
+                    <li>Llevar un proyecto técnico o emprendedor desde la idea hasta el prototipo.</li>
+                    <li>Comunicarse en inglés en situaciones cotidianas, de forma oral y escrita.</li>
+                </ul>
+            </div>
+            <aside class="secu-panel__lado">
+                <h4>Hitos del año</h4>
+                <ol class="secu-hitos-lista">
+                    <li><span>Mayo</span> Feria vocacional con universidades e institutos</li>
+                    <li><span>Julio</span> Charlas de egresadas de la institución</li>
+                    <li><span>Setiembre</span> Presentación de proyectos de Educación para el Trabajo</li>
+                    <li><span>Noviembre</span> Entrevista de orientación con tutoría</li>
+                </ol>
+            </aside>
+        </div>
+
+        <div class="secu-panel es-ciclo-vii" role="tabpanel" id="panel-g5" aria-labelledby="tab-g5" tabindex="0" hidden>
+            <div class="secu-panel__principal">
+                <span class="secu-panel__ciclo es-vii">Ciclo VII</span>
+                <h3>Cerrar la etapa y dar el siguiente paso</h3>
+                <p>Quinto es el año del egreso. El foco está en el reforzamiento académico de cara a los exámenes de admisión, en el trámite ordenado del certificado de estudios y en despedir la etapa escolar como corresponde.</p>
+                <h4>Al terminar 5° grado, ella puede…</h4>
+                <ul class="secu-logros">
+                    <li>Rendir un examen de admisión con la preparación académica necesaria.</li>
+                    <li>Sustentar en público un proyecto propio ante un jurado.</li>
+                    <li>Gestionar sus trámites y documentos de egreso de manera autónoma.</li>
+                </ul>
+            </div>
+            <aside class="secu-panel__lado">
+                <h4>Hitos del año</h4>
+                <ol class="secu-hitos-lista">
+                    <li><span>Marzo</span> Inicio del reforzamiento preuniversitario</li>
+                    <li><span>Julio</span> Simulacros de examen de admisión</li>
+                    <li><span>Octubre</span> Sustentación del proyecto final</li>
+                    <li><span>Diciembre</span> Ceremonia de graduación de la promoción</li>
+                </ol>
+            </aside>
+        </div>
+    </section>
+
+    <!-- ==================  ÁREAS CURRICULARES  ================== -->
+    <section id="areas" class="seccion-comun fondo-gris">
+
+        <div class="titulo-contenedor">
+            <h2>Áreas curriculares</h2>
+            <div class="linea-decorativa"></div>
+        </div>
+        <p class="subtitulo">
+            Doce áreas del plan de estudios del nivel. Filtra por campo o escribe el nombre
+            del área que buscas.
+        </p>
+
+        <div class="secu-filtros">
+            <div class="secu-chips" role="group" aria-label="Filtrar áreas por campo">
+                <button class="secu-chip is-activo" data-filtro="todas" aria-pressed="true">Todas</button>
+                <button class="secu-chip" data-filtro="humanidades" aria-pressed="false">Comunicación y humanidades</button>
+                <button class="secu-chip" data-filtro="ciencias" aria-pressed="false">Ciencias y tecnología</button>
+                <button class="secu-chip" data-filtro="arte" aria-pressed="false">Arte, deporte y bienestar</button>
+                <button class="secu-chip" data-filtro="trabajo" aria-pressed="false">Formación para el trabajo</button>
+            </div>
+
+            <div class="secu-buscador">
+                <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+                <label class="solo-lectores" for="buscar-area">Buscar un área curricular</label>
+                <input type="search" id="buscar-area" placeholder="Buscar un área…" autocomplete="off">
+            </div>
+        </div>
+
+        <p class="secu-conteo" id="conteo-areas" role="status" aria-live="polite"></p>
+
+        <!-- Las horas semanales son referenciales: ajústalas al plan de estudios oficial de la I.E. -->
+        <div class="secu-areas" id="lista-areas">
+
+            <!-- Comunicación y humanidades -->
+            <article class="secu-area" data-campo="humanidades" data-nombre="comunicacion lectura escritura oralidad lenguaje" style="--retraso:0">
+                <span class="secu-area__icono"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+                <h3>Comunicación</h3>
+                <p>Comprensión lectora, producción de textos y expresión oral, con énfasis en sostener ideas propias por escrito y en público.</p>
+                <p class="secu-area__horas">5 horas semanales</p>
+            </article>
+
+            <article class="secu-area" data-campo="humanidades" data-nombre="ingles idioma extranjero english" style="--retraso:1">
+                <span class="secu-area__icono"><i class="fas fa-language" aria-hidden="true"></i></span>
+                <h3>Inglés</h3>
+                <p>Comunicación oral y escrita en inglés como herramienta de acceso a estudios superiores y a información global.</p>
+                <p class="secu-area__horas">5 horas semanales</p>
+            </article>
+
+            <article class="secu-area" data-campo="humanidades" data-nombre="ciencias sociales historia geografia economia" style="--retraso:2">
+                <span class="secu-area__icono"><i class="fas fa-landmark" aria-hidden="true"></i></span>
+                <h3>Ciencias Sociales</h3>
+                <p>Historia, geografía y economía para leer críticamente el presente del país y ubicarse en él como ciudadana.</p>
+                <p class="secu-area__horas">4 horas semanales</p>
+            </article>
+
+            <article class="secu-area" data-campo="humanidades" data-nombre="desarrollo personal ciudadania civica dpcc valores identidad" style="--retraso:3">
+                <span class="secu-area__icono"><i class="fas fa-people-group" aria-hidden="true"></i></span>
+                <h3>Desarrollo Personal, Ciudadanía y Cívica</h3>
+                <p>Construcción de la identidad, convivencia democrática, derechos y autocuidado a lo largo de la adolescencia.</p>
+                <p class="secu-area__horas">3 horas semanales</p>
+            </article>
+
+            <article class="secu-area" data-campo="humanidades" data-nombre="educacion religiosa valores etica espiritualidad" style="--retraso:0">
+                <span class="secu-area__icono"><i class="fas fa-dove" aria-hidden="true"></i></span>
+                <h3>Educación Religiosa</h3>
+                <p>Formación en valores y reflexión ética, con respeto a la libertad de conciencia de cada familia.</p>
+                <p class="secu-area__horas">2 horas semanales</p>
+            </article>
+
+            <!-- Ciencias y tecnología -->
+            <article class="secu-area" data-campo="ciencias" data-nombre="matematica algebra geometria estadistica numeros" style="--retraso:1">
+                <span class="secu-area__icono"><i class="fas fa-square-root-variable" aria-hidden="true"></i></span>
+                <h3>Matemática</h3>
+                <p>Número, álgebra, geometría, estadística y probabilidad aplicados a problemas de la vida diaria y al razonamiento lógico.</p>
+                <p class="secu-area__horas">6 horas semanales</p>
+            </article>
+
+            <article class="secu-area" data-campo="ciencias" data-nombre="ciencia tecnologia biologia quimica fisica laboratorio" style="--retraso:2">
+                <span class="secu-area__icono"><i class="fas fa-flask" aria-hidden="true"></i></span>
+                <h3>Ciencia y Tecnología</h3>
+                <p>Indagación científica en laboratorio, alfabetización tecnológica y cuidado del ambiente desde la experimentación.</p>
+                <p class="secu-area__horas">5 horas semanales</p>
+            </article>
+
+            <article class="secu-area" data-campo="ciencias" data-nombre="computacion informatica ofimatica digital internet" style="--retraso:3">
+                <span class="secu-area__icono"><i class="fas fa-laptop-code" aria-hidden="true"></i></span>
+                <h3>Competencias digitales</h3>
+                <p>Uso responsable de entornos virtuales, ofimática, búsqueda de información confiable y seguridad en línea.</p>
+                <p class="secu-area__horas">2 horas semanales</p>
+            </article>
+
+            <!-- Arte, deporte y bienestar -->
+            <article class="secu-area" data-campo="arte" data-nombre="arte cultura musica danza pintura teatro creatividad" style="--retraso:0">
+                <span class="secu-area__icono"><i class="fas fa-palette" aria-hidden="true"></i></span>
+                <h3>Arte y Cultura</h3>
+                <p>Música, danza, artes visuales y teatro: lenguajes para crear y para leer la herencia cultural de La Libertad.</p>
+                <p class="secu-area__horas">3 horas semanales</p>
+            </article>
+
+            <article class="secu-area" data-campo="arte" data-nombre="educacion fisica deporte salud psicomotriz" style="--retraso:1">
+                <span class="secu-area__icono"><i class="fas fa-person-running" aria-hidden="true"></i></span>
+                <h3>Educación Física</h3>
+                <p>Desarrollo motor, hábitos saludables y deporte en equipo, con acceso a losa deportiva, campo y piscina.</p>
+                <p class="secu-area__horas">3 horas semanales</p>
+            </article>
+
+            <article class="secu-area" data-campo="arte" data-nombre="tutoria orientacion educativa acompanamiento socioemocional" style="--retraso:2">
+                <span class="secu-area__icono"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+                <h3>Tutoría y Orientación</h3>
+                <p>Acompañamiento socioemocional con una tutora por sección, más atención psicopedagógica cuando se necesita.</p>
+                <p class="secu-area__horas">2 horas semanales</p>
+            </article>
+
+            <!-- Formación para el trabajo -->
+            <article class="secu-area" data-campo="trabajo" data-nombre="educacion para el trabajo ept emprendimiento tecnico proyecto" style="--retraso:3">
+                <span class="secu-area__icono"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>
+                <h3>Educación para el Trabajo</h3>
+                <p>Proyectos técnicos y de emprendimiento: de la idea al prototipo, con orientación vocacional desde 3° grado.</p>
+                <p class="secu-area__horas">4 horas semanales</p>
+            </article>
+
+        </div>
+
+        <p class="secu-vacio" id="areas-vacio" hidden>
+            No hay áreas con ese nombre. Revisa la escritura o vuelve a «Todas».
+        </p>
+    </section>
+
+    <!-- ==================  JORNADA ESCOLAR  ================== -->
+    <section id="jornada" class="seccion-comun">
+
+        <div class="titulo-contenedor">
+            <h2>Un día en secundaria</h2>
+            <div class="linea-decorativa"></div>
+        </div>
+        <p class="subtitulo">Así se distribuye la jornada de lunes a viernes en el turno tarde.</p>
+
+        <ol class="secu-jornada">
+            <li>
+                <span class="secu-jornada__hora">12:45</span>
+                <div class="secu-jornada__caja">
+                    <h3>Ingreso y formación</h3>
+                    <p>Recepción en puerta, control de asistencia y formación general en el patio.</p>
+                </div>
+            </li>
+            <li>
+                <span class="secu-jornada__hora">1:00</span>
+                <div class="secu-jornada__caja">
+                    <h3>Primer bloque de clases</h3>
+                    <p>Tres horas pedagógicas seguidas, con las áreas de mayor exigencia al inicio de la jornada.</p>
+                </div>
+            </li>
+            <li class="es-pausa">
+                <span class="secu-jornada__hora">3:00</span>
+                <div class="secu-jornada__caja">
+                    <h3>Recreo</h3>
+                    <p>Veinte minutos de descanso, quiosco escolar y espacios de juego supervisados.</p>
+                </div>
+            </li>
+            <li>
+                <span class="secu-jornada__hora">3:20</span>
+                <div class="secu-jornada__caja">
+                    <h3>Segundo bloque de clases</h3>
+                    <p>Continúa el horario académico, con rotación a laboratorio o aula de innovación según el área.</p>
+                </div>
+            </li>
+            <li>
+                <span class="secu-jornada__hora">5:20</span>
+                <div class="secu-jornada__caja">
+                    <h3>Tutoría y reforzamiento</h3>
+                    <p>Según el día: tutoría grupal, reforzamiento académico u orientación vocacional. La institución no cuenta con talleres extracurriculares.</p>
+                </div>
+            </li>
+            <li>
+                <span class="secu-jornada__hora">6:30</span>
+                <div class="secu-jornada__caja">
+                    <h3>Salida</h3>
+                    <p>Salida escalonada por grados, con acompañamiento del personal hasta la puerta.</p>
+                </div>
+            </li>
+        </ol>
+
+        <p class="secu-nota">
+            <i class="fas fa-circle-info" aria-hidden="true"></i>
+            El horario puede variar según el grado y la programación anual aprobada por la dirección.
+        </p>
+    </section>
+
+    <!-- ==================  TESTIMONIOS  ================== -->
+    <section id="voces" class="seccion-comun">
+
+        <div class="titulo-contenedor">
+            <h2>Ellas lo cuentan</h2>
+            <div class="linea-decorativa"></div>
+        </div>
+
+        <div class="secu-carrusel">
+            <div class="secu-carrusel__marco">
+                <blockquote class="secu-voz is-activa">
+                    <p>Llegué de otro colegio en tercero y pensé que no me iba a adaptar. En dos semanas ya tenía grupo de estudio y estaba en el club de debate.</p>
+                    <footer><strong>Camila</strong> · 4° grado</footer>
+                </blockquote>
+
+                <blockquote class="secu-voz" hidden>
+                    <p>Lo que más me sirvió fue la feria vocacional de cuarto. Iba a postular a Derecho por costumbre familiar y terminé descubriendo Ingeniería Ambiental.</p>
+                    <footer><strong>Alessandra</strong> · 5° grado</footer>
+                </blockquote>
+
+                <blockquote class="secu-voz" hidden>
+                    <p>Entré a la universidad el mismo año que egresé. El reforzamiento de quinto y los simulacros hicieron la diferencia cuando rendí el examen.</p>
+                    <footer><strong>Rosa</strong> · Egresada, promoción 2023</footer>
+                </blockquote>
+            </div>
+
+            <div class="secu-carrusel__control">
+                <button type="button" id="voz-anterior" aria-label="Testimonio anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                <div class="secu-carrusel__puntos" id="voz-puntos"></div>
+                <button type="button" id="voz-siguiente" aria-label="Testimonio siguiente"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================  PREGUNTAS FRECUENTES  ================== -->
+    <section id="preguntas" class="seccion-comun fondo-gris">
+
+        <div class="titulo-contenedor">
+            <h2>Preguntas frecuentes</h2>
+            <div class="linea-decorativa"></div>
+        </div>
+
+        <div class="secu-faq">
+            <details class="secu-pregunta">
+                <summary>¿Qué edad debe tener mi hija para postular a 1° de secundaria?</summary>
+                <p>Debe haber concluido el 6° grado de primaria y tener 12 años cumplidos al 31 de marzo del año escolar. La edad se verifica con el DNI durante la matrícula.</p>
+            </details>
+
+            <details class="secu-pregunta">
+                <summary>¿Reciben estudiantes trasladadas de otros colegios?</summary>
+                <p>Sí, de 1° a 4° grado, siempre que existan vacantes en la sección solicitada. El traslado se tramita por SIAGIE y requiere la constancia de vacante y la ficha única de matrícula del colegio de origen.</p>
+            </details>
+
+            <details class="secu-pregunta">
+                <summary>¿Qué documentos se presentan para la matrícula?</summary>
+                <p>DNI de la estudiante y del apoderado, certificado o libreta de estudios del año anterior, y la ficha de matrícula firmada. El detalle completo y las fechas están en la página de Matrícula.</p>
+            </details>
+
+            <details class="secu-pregunta">
+                <summary>¿La institución ofrece talleres extracurriculares?</summary>
+                <p>Actualmente no contamos con talleres o clubes fuera de la malla curricular. La jornada del turno tarde se concentra en las áreas académicas, la tutoría y el reforzamiento de las estudiantes.</p>
+            </details>
+
+            <details class="secu-pregunta">
+                <summary>¿Cómo se acompaña a las estudiantes que se atrasan?</summary>
+                <p>Cada sección tiene una tutora asignada que hace seguimiento del rendimiento y de la asistencia. Cuando se detecta un retraso, se cita a la familia y se programa reforzamiento en el bloque de la tarde.</p>
+            </details>
+
+            <details class="secu-pregunta">
+                <summary>¿Qué pasa al terminar 5° grado?</summary>
+                <p>La estudiante recibe su certificado oficial de estudios y el acta de egreso. Durante todo quinto se trabaja la preparación para exámenes de admisión a universidades e institutos de Trujillo.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- ==================  CTA  ================== -->
+    <section class="secu-cta">
+        <div class="secu-cta__caja">
+            <h2>Las vacantes de secundaria se abren cada año en diciembre</h2>
+            <p>Revisa los requisitos, las fechas y el número de vacantes por grado antes de acercarte a la institución.</p>
+            <div class="secu-cta__acciones">
+                <a href="matricula.html" class="btn-principal">Ver requisitos de matrícula</a>
+                <a href="contacto.html" class="btn-secundario">Escribir a la institución</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="footer-contenido">
+
+            <div class="footer-columna">
+                <div class="footer-logo">
+                    <img src="imagenes/logo.png" alt="Logo I.E. Modelo" style="width:40px;height:40px">
+                    <h3>I.E. MODELO</h3>
+                </div>
+                <p>Formando el futuro de Trujillo desde 1943 con excelencia académica y valores humanos.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/p/Modelo-Trujillo-100009352812794/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@i.e.modelo.trujil" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="estudios.html">Oferta académica</a></li>
+                    <li><a href="matricula.html">Matrícula</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="https://www.perueduca.pe/#/home" target="_blank" rel="noopener noreferrer">PerúEduca</a></li>
+                    <li><a href="https://siagie.minedu.gob.pe/" target="_blank" rel="noopener noreferrer">SIAGIE</a></li>
+                    <li><a href="https://repositorio.minedu.gob.pe/" target="_blank" rel="noopener noreferrer">Biblioteca Digital MINEDU</a></li>
+                    <li><a href="https://www.gob.pe/112850-norma-del-ano-escolar" target="_blank" rel="noopener noreferrer">Calendario Escolar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Portales educativos</h4>
+                <ul>
+                    <li><a href="https://www.gob.pe/minedu" target="_blank" rel="noopener noreferrer">Ministerio de Educación</a></li>
+                    <li><a href="https://identicole.minedu.gob.pe/" target="_blank" rel="noopener noreferrer">Identicole</a></li>
+                    <li><a href="https://titulosinstitutos.minedu.gob.pe/" target="_blank" rel="noopener noreferrer">Consulta de Títulos</a></li>
+                    <li><a href="https://www.gob.pe/regionlalibertad-gre" target="_blank" rel="noopener noreferrer">GRELL - La Libertad</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-copyright">
+            <p>© 2026 Institución Educativa Modelo - Trujillo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/secundaria.js"></script>
+</body>
+</html>
